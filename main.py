@@ -2,27 +2,29 @@
 Шифр Цезаря (циклического сдвига на длину этого слова)
 """
 
-def f(word_in): # Шифр Цезаря
-    word_out = '' # Результирующая строка
-    tmp = '' # Вспомогательная строка
-    for a in word_in: # Цикл по входной строке
-        if a.isalpha(): # Проверка на буквы
-            tmp += a # Добавление буквы в вспомогательную строку
-        else: # Если не буква
-            if tmp: # Если вспомогательная строка не пустая
-                for b in tmp: # Цикл по вспомогательной строке
-                    if b.isupper(): # Если буква в верхнем регистре
+def f(word_in):  # Шифр Цезаря
+    word_out = ''  # Результирующая строка
+    tmp = ''  # Вспомогательная строка
+    for a in word_in:  # Цикл по входной строке
+        if a.isalpha():  # Проверка на буквы
+            tmp += a  # Добавление буквы во вспомогательную строку
+        else:  # Если не буква
+            if tmp:  # Если вспомогательная строка не пустая
+                for b in tmp:  # Цикл по вспомогательной строке
+                    if b.isupper():  # Если буква в верхнем регистре
                         # Сдвиг на длину вспомогательной строки (кол-во заглавных букв в алфавите)
-                        c = (ord(b) - 65+len(tmp)) % 26 + 65
-                    else: # Если буква в нижнем регистре
+                        c = (ord(b) - 65 + len(tmp)) % 26 + 65
+                    else:  # Если буква в нижнем регистре
                         # Сдвиг на длину вспомогательной строки (кол-во строчных букв в алфавите)
-                        c = (ord(b) - 97+len(tmp)) % 26 + 97
-                    word_out += chr(c) # Добавление буквы в результирующую строку
-            tmp = '' # Очистка вспомогательной строки
-            word_out += a # Добавление буквы в результирующую строку
+                        c = (ord(b) - 97 + len(tmp)) % 26 + 97
+                    word_out += chr(c)  # Добавление буквы в результирующую строку
+            tmp = ''  # Очистка вспомогательной строки
+            word_out += a  # Добавление буквы в результирующую строку
     return word_out
-# print('Sample Input 1:\nDay, mice. "Year" is a mistake!\nSample Output 1:')
-# print(f('Day, mice. "Year" is a mistake!'))
-# print('------------------------------------')
-# print('Sample Input 2:\nmy name is Python!\nSample Output 2:')
-# print(f('my name is Python!'))
+
+
+print('Sample Input 1:\nDay, mice. "Year" is a mistake!\nSample Output 1:')
+print(f('Day, mice. "Year" is a mistake!'))
+print('------------------------------------')
+print('Sample Input 2:\nmy name is Python!\nSample Output 2:')
+print(f('my name is Python!'))
