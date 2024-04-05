@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cipher-caesar"
+version = "0.1.0"
+description = ""
+authors = ["Aleksey <oszn2011@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+coverage = "^7.4.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
