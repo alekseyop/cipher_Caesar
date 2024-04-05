@@ -21,8 +21,8 @@ def f(word_in): # Шифр Цезаря
             tmp = '' # Очистка вспомогательной строки
             word_out += a # Добавление буквы в результирующую строку
     return word_out
-# print('Sample Input 1:\nDay, mice. "Year" is a mistake!\nSample Output 1:')
-# print(f('Day, mice. "Year" is a mistake!'))
-# print('------------------------------------')
-# print('Sample Input 2:\nmy name is Python!\nSample Output 2:')
-# print(f('my name is Python!'))
+print('Sample Input 1:\nDay, mice. "Year" is a mistake!\nSample Output 1:')
+print(f('Day, mice. "Year" is a mistake!'))
+print('------------------------------------')
+print('Sample Input 2:\nmy name is Python!\nSample Output 2:')
+print(f('my name is Python!'))
