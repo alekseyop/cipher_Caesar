@@ -25,7 +25,7 @@ def f(word_in, cypher, step):
     return word_out[:-1]
 
 
-q = input('Enter text: ')
+q = input('Введите текст: ')
 q1 = int(input('1 - кодирование, -1 - декодирование: '))
 q2 = int(input('Шаг шифрования 0 по длине слова: '))
 print(f(q, q1, q2))
