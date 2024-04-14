@@ -14,14 +14,17 @@ def f(word_in, cypher, step_count):
         else:
             if tmp:
                 for b in tmp:
-                    x = (step_count if step_count > 0 else len(tmp)) * cypher  # шаг шифрования и дешифрования
-                    abc_count = 26 if ord(b) < 123 else 32  # количество букв в алфавите 26 или 32
+                    # шаг шифрования и дешифрования или по длине слова
+                    x = (step_count if step_count > 0 else len(tmp)) * cypher
+
+                    # количество букв в английском или русском алфавите 26 или 32
+                    abc_count = 26 if ord(b) < 123 else 32
 
                     if b.isupper():  # если буква в верхнем регистре
                         abc_code = 65 if ord(b) < 123 else 1040  # код буквы в английском или русском алфавите
 
                     else:  # если буква в нижнем регистре
-                        abc_code = 97 if ord(b) < 123 else 1072
+                        abc_code = 97 if ord(b) < 123 else 1072  # код буквы в английском или русском алфавите
 
                     character = (ord(b) - abc_code + x) % abc_count + abc_code  # формирование кода буквы
                     word_out += chr(character)  # добавление буквы в зашифрованный или дешифрованный текст
